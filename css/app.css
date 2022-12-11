@@ -1,0 +1,222 @@
+body {
+  display: grid;
+  place-content: center;
+
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px;
+  box-sizing: border-box;
+  background-image: url("https://images.unsplash.com/photo-1664575196412-ed801e8333a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80");
+  animation: move 20s ease-in alternate-reverse infinite;
+  /* background-image:
+    url("https://images.unsplash.com/photo-1554224155-1696413565d3?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzJ8fGZvcm18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: scroll; */
+  background-size: 100%;
+  width: 100%;
+  height: 100%;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Open Sans", sans-serif;
+}
+
+body .gform_wrapper .gform_body .gform_fields .gfield .gchoice {
+  position: relative;
+}
+
+@keyframes move {
+  80% {
+    background-position: 20%;
+  }
+}
+
+.rad-label {
+  display: flex;
+  align-items: center;
+
+  border-radius: 100px;
+  padding: 10px 12px;
+  margin: 8px 0;
+
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.rad-label:hover,
+.rad-label:focus-within {
+  background: hsla(0, 0%, 80%, 0.14);
+}
+
+.rad-input {
+  position: static;
+  left: 0;
+  top: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  z-index: -1;
+}
+
+.rad-design {
+  width: 18px;
+  height: 18px;
+  border-radius: 100px;
+
+  background: linear-gradient(to right bottom,
+      hsl(154, 97%, 62%),
+      hsl(225, 97%, 62%));
+  position: static;
+}
+
+.rad-design::before {
+  content: "";
+
+  display: inline-block;
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+
+  background: hsl(0, 0%, 90%);
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+.rad-input:checked+.rad-design::before {
+  transform: scale(0);
+}
+
+.rad-text {
+  color: hsl(0, 0%, 60%);
+  margin-left: 14px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.rad-input:checked~.rad-text {
+  color: hsl(0, 0%, 40%);
+}
+
+/* ABS */
+/* ====================================================== */
+.abs-site-link {
+  position: fixed;
+  bottom: 40px;
+  left: 20px;
+  color: hsla(0, 0%, 0%, 0.5);
+  font-size: 16px;
+}
+
+.form {
+  width: 900px;
+  height: min-content;
+  padding: 40px;
+  background: rgb(12, 1, 1);
+  text-align: left;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .2);
+}
+
+.form-first-part {
+  height: 250px;
+  width: auto;
+  border: 5px solid red;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.btn-5 {
+  background: rgb(95, 74, 152);
+  color: #fff;
+  line-height: 42px;
+  padding: 0;
+  border: none;
+}
+
+.btn-5:hover {
+  background: transparent;
+  /* opacity: 0.5; */
+  color: rgb(95, 74, 152);
+
+}
+
+.btn-5:before,
+.btn-5:after {
+  content: "";
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 2px;
+  width: 0;
+  background: #000;
+  transition: 400ms ease all;
+}
+
+.btn-5:after {
+  right: inherit;
+  top: inherit;
+  left: 0;
+  bottom: 0;
+}
+
+.btn-5:hover:before,
+.btn-5:hover:after {
+  width: 100%;
+  transition: 800ms ease all;
+}
+.options {
+  width:60%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: space-evenly;
+}
+.five{
+  margin-left:18px;
+}
+
+/* modification */
+.btn-hvr {
+  transition: .1s all ease-in;
+  cursor: pointer;
+}
+.btn-hvr:hover {
+  transition: .1s all ease-in;
+  border: 2px solid blueviolet;
+  cursor: pointer;
+}
+
+.btn-15 {
+  background: #b621fe;
+  border: none;
+  z-index: 1;
+}
+.btn-15:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #663dff;
+  border-radius: 5px;
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1);
+  transition: all 0.1s ease;
+}
+.btn-15:hover {
+  color: #fff;
+}
+.btn-15:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-15:active {
+  top: 2px;
+}

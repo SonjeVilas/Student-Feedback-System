@@ -1,0 +1,92 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700|Open+Sans:400,300,600);
+
+body {
+  
+  color: rgba(166, 164, 202, 0.879);
+  background-color: #222;
+
+}
+input {
+  outline: none;
+  border: none;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  background-color: aliceblue;
+}
+.student-details select,
+.student-details select:focus {
+  outline: none;
+  border: none;
+  padding: 5px 2px 5px 2px;
+  margin: 5px 0 5px 0;
+  background-color: aliceblue;
+}
+.student-details #name{
+  margin-left: 140px;
+  width:150px;
+  height: 15px;
+}
+.student-details #prn{
+  margin-left: 152px;
+  width:150px;
+  height: 15px;
+}
+.student-details #year {
+  width: 160px;
+  margin-left: 80px;
+}
+.student-details #sem {
+  width: 160px;
+  margin-left: 119px;
+}
+.student-details #date {
+  width: 150px;
+  margin-left: 60px;
+}
+.student-details #branch {
+  width: 160px;
+  margin-left: 136px;
+}
+.student-details #subject {
+  width: 160px;
+  margin-left: 132px;
+}
+.student-feedback label {
+  padding-right: 45px;
+}
+.student-feedback input[type="radio"] {
+  margin: 0 2px 0 2px;
+}
+.student-feedback textarea {
+  width: 500px;
+  height: 100px;
+  outline: none;
+  border: none;
+  padding: 8px;
+  margin: 5px 0 5px 0;
+  background-color:  rgba(166, 164, 202, 0.879);
+}
+.submit-form {
+  padding-top: 20px;
+}
+.submit-form #submit {
+  font-size: medium;
+  font-weight: bold;
+  width: 100px;
+}
+.admin-login {
+  position: absolute;
+  right: 80px;
+}
+.admin-login #admin {
+  font-size: medium;
+  font-weight: bold;
+  width: 100px;
+}
+.copyright-text {
+  color: rgba(255, 255, 255, 0.879);
+  font-size: 14px;
+}
+.form{
+  opacity: 0.93;   
+}
